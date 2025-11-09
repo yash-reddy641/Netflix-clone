@@ -1,0 +1,380 @@
+/* ✅ Universal reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  background-image: url('img/IN-en-20251103-TRIFECTA-perspective_8a65e995-9926-414c-83c5-f7cc9af10871_large.jpg');
+  height: 100vh;               /* ✅ vh for full-screen background */
+  width: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+.main .box {
+  opacity: 0.5;
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+nav img {
+  position: relative;
+  z-index: 10;
+  left: 10%;
+  top: 30px;
+  width: 12vw;                 /* ✅ responsive image */
+  max-width: 200px;
+}
+
+select {
+  position: relative;
+  z-index: 10;
+  left: 75%;
+  top: -1%;
+  padding: 12px 3vw;           /* ✅ vw instead of hardcoded px */
+  color: white;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 900;
+  border-radius: 5px;
+}
+
+.but {
+  position: relative;
+  z-index: 10;
+  left: 78%;
+  top: -1%;
+  padding: 1rem 1.5rem;        /* ✅ responsive padding */
+  background-color: rgb(196, 8, 18);
+  color: white;
+  font-size: 1rem;
+  font-weight: 900;
+  border: none;
+  border-radius: 5px;
+}
+
+option {
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.net,
+.flix {
+  font-size: clamp(2rem, 8vw, 5rem); /* ✅ auto scaling font */
+  color: white;
+  font-weight: bolder;
+  position: relative;
+  z-index: 20;
+  text-align: center;
+  top: 20%;
+}
+
+.hero {
+  font-size: clamp(1rem, 2vw, 1.7rem);
+  color: white;
+  font-weight: bold;
+  z-index: 20;
+  text-align: center;
+  top: 22%;
+  position: relative;
+}
+
+.villan {
+  color: white;
+  font-weight: lighter;
+  text-align: center;
+  top: 27%;
+  position: relative;
+  z-index: 20;
+  font-size: 1.2rem;
+}
+
+.in {
+  position: relative;
+  top: 29%;
+  left: 13%;
+}
+
+input {
+  font-weight: 600;
+  background-color: transparent;
+  padding: 1.5rem 8vw;          /* ✅ vw padding */
+  border-radius: 5px;
+  border: 2px solid white;
+  position: relative;
+  left: 19%;
+  color: white;
+  width: 40vw;                  /* ✅ responsive width */
+  min-width: 250px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid white;
+}
+
+input::placeholder {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ddd;
+}
+
+.get {
+  position: relative;
+  top: 21%;
+  left: 55%;
+  background-color: rgb(196, 8, 18);
+  color: white;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ✅ Section background and curved border */
+.border {
+  background: linear-gradient(to bottom, #0b0b0d, #141414 60%, #1a1a2e);
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+}
+
+.arc {
+  border-bottom-left-radius: 300px 150px;
+  border-bottom-right-radius: 300px 150px;
+  border: 4px solid #E50914;
+  border-top: none;
+  filter: drop-shadow(0 0 8px #ff3355);
+}
+
+/* ✅ Movie row setup */
+.movie-row {
+  position: relative;
+  width: 90%;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  top: 5%;
+}
+
+.movie-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.movie-container::-webkit-scrollbar {
+  display: none;
+}
+
+.movie-container img {
+  flex: 0 0 auto;
+  width: 18vw;                  /* ✅ responsive image size */
+  max-width: 220px;
+  height: 30vh;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+}
+
+.movie-container img:hover {
+  transform: scale(1.1);
+}
+
+/* ✅ scroll arrows */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 6px 12px;
+  z-index: 2;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ✅ Responsive cards */
+.cards-row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 2vw;
+  flex-wrap: wrap;             /* ✅ makes responsive wrapping */
+  margin-top: 5vh;
+  width: 100%;
+}
+
+.car,
+.card11,
+.card12,
+.card19 {
+  position: static;
+  width: 22%;
+  min-width: 250px;
+  height: auto;
+  background: linear-gradient(to right, #0b0b1a, #1a0b1f);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+/* ✅ Responsive FAQ cards */
+.card27,
+.card28,
+.card29,
+.card30,
+.card31,
+.card32 {
+  color: white;
+  background-color: #2d2d2d;
+  border: 3px solid grey;
+  width: 75%;
+  height: auto;
+  padding: 2rem;
+  margin: 1rem auto;
+  border-radius: 10px;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  transition: background-color 0.3s ease;
+}
+
+.card27:hover,
+.card28:hover,
+.card29:hover,
+.card30:hover,
+.card31:hover,
+.card32:hover {
+  background-color: rgb(86, 86, 86);
+}
+
+/* ✅ Get Started button alignment */
+.card34 {
+  position: relative;
+  left: 20%;
+  background-color: rgb(196, 8, 18);
+  transform: translateY(6px);
+  color: white;
+  font-weight: bolder;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ✅ FOOTER */
+.card40 {
+  display: flex;
+  flex-wrap: wrap;             /* ✅ allows wrapping on mobile */
+  gap: 10vw;                   /* ✅ proportional space */
+  font-size: 1.2rem;
+  margin: 3% 5%;
+  list-style: none;
+}
+
+/* ✅ Responsive media queries */
+@media (max-width: 1024px) {
+  select, .but {
+    left: 65%;
+    padding: 10px 20px;
+  }
+  input {
+    width: 70%;
+    left: 0;
+  }
+  .get {
+    left: 50%;
+    top: 26%;
+    transform: translate(-50%, 20px);
+  }
+  .cards-row {
+    gap: 3vw;
+  }
+  .car, .card11, .card12, .card19 {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav img {
+    width: 20vw;
+    left: 5%;
+  }
+  select, .but {
+    left: 60%;
+    padding: 8px 15px;
+  }
+  .in {
+    top: 25%;
+    left: 5%;
+  }
+  input {
+    width: 80%;
+    left: 0;
+    padding: 1rem 5vw;
+  }
+  .get {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    font-size: 1.3rem;
+  }
+  .cards-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .car, .card11, .card12, .card19 {
+    width: 85%;
+  }
+}
+
+@media (max-width: 480px) {
+  nav img {
+    width: 25vw;
+    left: 5%;
+  }
+  select, .but {
+    left: 50%;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+  .net, .flix {
+    font-size: clamp(1.8rem, 8vw, 3rem);
+  }
+  .in {
+    top: 28%;
+    left: 3%;
+  }
+  input {
+    width: 90%;
+    padding: 15px 4vw;
+    font-size: 1rem;
+  }
+  .get {
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  .card27, .card28, .card29, .card30, .card31, .card32 {
+    width: 90%;
+    font-size: 1.2rem;
+  }
+}
+

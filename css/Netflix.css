@@ -1,0 +1,615 @@
+   * {
+    top:0;
+    margin:0;
+    box-sizing: border-box;
+  }
+  .main {
+    background-image:url('img/IN-en-20251103-TRIFECTA-perspective_8a65e995-9926-414c-83c5-f7cc9af10871_large.jpg') ;
+    height:100vh;
+    width:100%;
+    background-size:cover;
+    position:relative;
+  }
+  .main .box {
+    opacity:0.5;
+    background-color:black;
+    height:100vh;
+    width: 100%;
+    position:absolute;
+    top:0;
+  }
+  nav img {
+    position: relative;
+    z-index:10;
+    left:10%;
+    top:30px;
+  }
+  select {
+    position: relative;
+    z-index: 10;
+    left:75%;
+    top: -0.9%;
+    padding: 13px 40px 13px 40px;
+    color: white;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight:900;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+  }
+  .but{
+    position: relative;
+    z-index: 10;
+    left:76%;
+    top: -0.9%;
+    padding: 15px 25px 15px 25px;
+    background-color:rgb(196,8,18);
+    color: white;
+    font-size:1rem;
+    font-weight:900;
+    border: 2px red;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+
+  }
+  option {
+    color: black;
+    font-size: 1rem;
+    font-weight: bolder;
+  }
+ /* p {
+    color: white;
+    font-weight: bolder;
+    position: relative;
+    z-index: 20;
+    text-align: center;
+    align-items: center;
+    top:20%;
+ } */
+
+ .net {
+    font-size:500%;
+     color: white;
+    font-weight: bolder;
+    position: relative;
+    z-index: 20;
+    text-align: center;
+    align-items: center;
+    top:20%;
+ }
+ .flix {
+    font-size: 500%;
+     color: white;
+    font-weight: bolder;
+    position: relative;
+    z-index: 20;
+    text-align: center;
+    align-items: center;
+    top:20%;
+ }
+
+ .hero {
+    font-size: 170%;
+     position: relative;
+     color: white;
+    font-weight: bold;
+    position: relative;
+    z-index: 20;
+    text-align: center;
+    top:22%;
+ }
+
+ .villan {
+     color: white;
+    font-weight:lighter;
+    position: relative;
+    z-index: 20;
+    text-align: center;
+    align-items: center;
+    top:27%;
+    font-size: 1.4rem;
+ }
+
+ .in{
+   position: relative;
+   top: 29%;
+   left: 13%;
+   
+   
+ }
+
+ input {
+   font-weight: 600;
+   background-color: transparent;
+   padding: 25px 128px 25px 128px;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+   border-bottom-left-radius: 5px;
+   border: 2px  solid white;
+   position: relative;
+   left:19%;
+ }
+
+ input:focus{
+    outline: none;
+    border: 2px solid white;
+    
+ }
+
+ input::placeholder {
+    font-size:1.4rem;
+    font-weight:bolder; 
+    position: relative;
+    right: 70%;
+    
+ }
+
+ .get {
+    position: relative;
+    top: 21%;
+    left:55.5%;
+   background-color:rgb(196,8,18);
+   color: white;
+   font-weight: bolder;
+   padding: 15px 40px 15px 20px;
+   font-size: 2rem;
+   border-bottom-right-radius:6px;
+   border-bottom-left-radius:6px;
+   border-top-right-radius:6px;
+   border-top-left-radius:6px;
+ }
+ 
+.border {
+    background: linear-gradient(to bottom, #0b0b0d, #141414 60%, #1a1a2e);
+    min-height:100vh;
+    width:100%; 
+    background-size: cover;
+}
+
+.arc {
+  border-bottom-left-radius: 300px 150px;
+  border-bottom-right-radius: 300px 150px;
+  border: 4px solid #E50914;
+  border-top: none;
+  filter: drop-shadow(0 0 8px #ff3355);
+}
+
+h1 {
+    color: white;
+    position: relative;
+    left: 4.8%;
+    top: 5%;
+}
+ 
+
+/* .span {
+    display: grid;
+    grid-template-columns:repeat(10,2fr);
+    column-gap: 2rem;
+    background-size: cover;
+
+} */
+
+/* img:hover {
+    transform: scale(1.2);
+    transition: transform 0.9s ease; 
+   
+} */
+
+.movie-row {
+  position: relative;
+  width: 90%;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  overflow:visible;
+  top: 5%;
+}
+
+/* Scrollable image row */
+.movie-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Hide scrollbar (Firefox) */
+}
+.movie-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar (Chrome) */
+}
+
+.movie-container img {
+  flex: 0 0 auto;
+  width: 220px;
+  height: 300px;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+}
+.movie-container img:hover {
+  transform: scale(1.1);
+}
+
+/* Decorative arrows (static icons, not clickable without JS) */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 35px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 6px 12px;
+  user-select: none;
+  z-index: 2;
+  pointer-events: none; /* purely decorative */
+}
+
+.scroll-btn.left {
+  left: 5px;
+}
+
+.scroll-btn.right {
+  right: 5px;
+}
+ 
+h2 {
+    color:white;
+    position: relative;
+    top:14%;
+    left:5.1%;
+    font-size: 2rem;
+}
+.car {
+    list-style-type: none;
+    color: white;
+    position: relative;
+    top: 10%;
+    left: 2%;  
+     background: linear-gradient(to right,#0b0b1a,#1a0b1f
+    );
+     border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-right-radius:10px;
+    border-bottom-left-radius:10px;
+} 
+.card {
+    font-size:2rem;
+    position: relative;
+    right:5%;
+    left:0%;
+    top: 5%;
+    font-style: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+.card1,.card2,.card3,.card4{
+    font-size: 1.5rem;
+    position: relative;
+    top:8%;
+     left:0px;
+     color: grey;
+     font-weight: 700;
+     font-style: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+  .card5,.card6,.card7 {
+  color: white;
+  list-style: none;
+  font-size: 2rem;
+  position: relative;
+  font-weight: 700;
+  font-style: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ left:0%;
+}
+
+.card8,.card9,.card10 {
+  color: grey;
+  font-weight: 700;
+  list-style:none;
+  position: relative;
+  font-style: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  left:0%;
+  font-size: 1.5rem;
+  top: 5%;
+ 
+}
+
+.card13,.card14 {
+  color: white;
+  list-style: none;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.card15,.card16,.card17,.card18{
+  position: relative;
+  top: 5%;
+  color:grey;
+  font-size: 1.6rem;
+  list-style: none;
+  font-weight: 700;
+font-style: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.card20,.card21 {
+  color: white;
+  list-style: none;
+  font-weight: 700;
+  font-size: 2rem;
+  font-style: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 7000;
+}
+
+
+.card22,.card23,.card24,.card25,.card26 {
+  position: relative;
+  top: 4%;
+  font-weight: 700;
+  list-style: none;
+  font-size: 1.6rem;
+  color: grey;
+  font-style: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.cards-row {
+  display: flex;              /* ✅ side by side layout */
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap:35px;                  /* space between boxes */
+  flex-wrap: wrap;            /* will wrap if screen small */
+  margin-top: 50px;
+  width: 100%;
+}
+
+/* make all boxes same width and height */
+.car, .card11, .card12, .card19 {
+  position: static;           /* stop overlapping */
+  width:17%;                 /* 4 boxes fit per row */
+  height: 50vh;
+  background: linear-gradient(to right,#0b0b1a,#1a0b1f);
+  border-radius: 10px;
+  padding: 20px;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+.car {
+  position: relative;
+  left:3%;
+}
+
+.card {
+  position:relative;
+  left:6%;
+}
+.card12 {
+  position: relative;
+  right:7%;
+}
+
+.card19{
+position: relative;
+right:18%;
+}
+
+h3 {
+  position: relative;
+  left:5%;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-style: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  margin-top:4%;
+}
+
+.card27,.card28,.card29,.card30,.card31,.card32{
+  position: relative;
+  left: 5%;
+  color: white;
+  margin-top:1%;
+  font-style: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2.5rem;
+  /* background-color:rgb(55, 55, 55); */
+  background-color: #2d2d2d;
+} 
+
+.card27 {
+  border: 3px solid grey;
+  height:15vh;
+  width: 75%;
+  padding:40px;
+}
+
+.card28 {
+  border: 3px solid grey;
+  height:15vh;
+  width: 75%;
+  padding:40px;
+  position: relative;
+  
+}
+
+.card29 {
+  border: 3px solid grey;
+  height:15vh;
+  width: 75%;
+  padding:40px;
+}
+
+.card30 {
+  border: 3px solid grey;
+  height:15vh;
+  width: 75%;
+  padding:40px;
+}
+
+.card31 {
+  border: 3px solid grey;
+  height:15vh;
+  width: 75%;
+  padding:40px;
+}
+
+.card32 {
+  border: 3px solid grey;
+  height:15vh;
+  width: 75%;
+  padding:40px;
+}
+
+.card27:hover,
+.card28:hover,
+.card29:hover,
+.card30:hover,
+.card31:hover,
+.card32:hover {
+  background-color: rgb(86, 86, 86);
+}
+
+h4 {
+  position: relative;
+  left: 23%;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  font-style:"Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top:4.5%;
+}
+
+.card33 {
+  padding:25px 325px 25px 400px;
+  position: relative;
+  margin-left:-6%;
+  margin-top:1%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.card34 {
+  padding:15px 100px 15px 100px; 
+  position: relative;
+  left:19.5%;
+  background-color:rgb(196,8,18);
+   /* margin-top:-3.8%;  */
+   transform: translateY(6px);
+  color: white;
+   font-weight: bolder;
+   padding: 15px 40px 15px 20px;
+   font-size: 2rem;
+   border-bottom-right-radius:6px;
+   border-bottom-left-radius:6px;
+   border-top-right-radius:6px;
+   border-top-left-radius:6px;
+}
+
+.card35 {
+  color: grey;
+  position: relative;
+  left:5%;
+  margin-top:4%;
+  font-size: 1.5rem;
+  font-style:"Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: grey;
+}
+
+
+.card40 {
+  display: flex;
+  justify-content:start; /* center horizontally */
+  gap: 200px; 
+  list-style: none;
+  font-size: 1.5rem;
+  position: relative;
+  margin-top: 3%;
+}
+
+.card36 {
+  position: relative;
+  left: 3.8%;
+}
+
+.card42 { 
+display: flex;
+  flex-direction: column;
+  gap: 10px; /* adjust value as you like */
+}
+
+.card43 {
+ display: flex;
+  flex-direction: column;
+  gap: 10px; /* adjust value as you like */
+}
+
+.card44 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* adjust value as you like */
+}
+
+.card36 {
+  list-style: none;   /* remove bullets */
+  padding: 0;
+  margin: 0;
+  display: flex;      /* gap only works when this or grid is used */
+  flex-direction: column;
+  gap: 20px;          /* <-- the space you asked for */
+}
+
+.card36 li {
+  display: block;     /* ensures each item is a block inside the flex column */
+}
+
+
+.card37,
+.card38,
+.card39 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* space between each li item */
+}
+
+.card56 {
+  position: relative;
+  left: -71%;
+  margin-top: 3.5%;
+  border-bottom-right-radius:6px;
+   border-bottom-left-radius:6px;
+   border-top-right-radius:6px;
+   border-top-left-radius:6px;
+}
+
+.card57{
+  position: relative;
+  left: 4%;
+  color: grey;
+ margin-top: 2.9%;
+ font-size: 1.5rem;
+  font-style:"Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.card58 {
+  position: relative;
+  left: 4%;
+  color: grey;
+  margin-top: 2.9%;
+  font-size: 1.5rem;
+  font-style:"Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.card59 {
+  color: blue;
+} 
+

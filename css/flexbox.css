@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    min-height:vh;
+    padding:20px;
+}
+p {
+    color: whitesmoke;
+    background-color: black;
+    height: 100px;
+    min-width: 100px;
+    font-size: 3rem;
+    padding:0.5rem;
+}
+
+.container{
+    max-width: 800px;
+    min-height: 400px;
+    margin-inline:auto;
+    border: 1px solid black;
+    display: flex;
+    gap: 1rem;
+    justify-content:space-between; 
+    align-items:center;
+    flex-wrap: wrap; 
+}
+
+.box:nth-child(6){
+    background-color: brown;
+    flex-grow:3;
+    order:-2;
+}

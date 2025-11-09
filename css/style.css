@@ -1,0 +1,127 @@
+body {
+    color:red;
+    font-style: oblique;
+   
+}
+h1 {
+    border: 8px double red;
+    width: 97%;
+    padding: 1rem;
+    outline: 8px solid black;
+    background-color: blue;
+    border-radius: 2rem 2rem 2rem 2rem;
+    width: 40%;
+}
+
+.container {
+    border: 2px dashed blue;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: red;
+}
+
+a:hover {
+    cursor:pointer;
+    color:blue;
+}
+
+/* Make borders visible */
+#timetable, 
+#timetable th, 
+#timetable td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+/* Add spacing and alignment */
+#timetable th, 
+#timetable td {
+    padding: 8px;
+    text-align: center;
+}
+
+/* Add background colors */
+#timetable th {
+    background-color: lightblue;
+}
+
+#timetable td {
+    background-color: #f9f9f9;
+}
+
+#timetable {
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+th,tr {
+    color: red;
+}
+
+  h4 {
+    color: whitesmoke;
+    background-color: gray;
+    font-size: 40px;
+}
+h5 {
+    color: blue;
+    background-color: grey;
+    font-size: 40px;
+    width: 35%; }
+
+span {
+    background-color: red;
+    color: whitesmoke;
+    padding: 4em;
+    height: 200px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100vh;
+  padding-top: 80px;     /* space so content starts below the navbar */
+}
+
+.blue, .green, .gray {
+  font-size: 3rem;
+  text-align: center;
+  position: sticky;
+  top:0;
+}
+
+.blue { background-color: blue; }
+.green { background-color: green; }
+.gray { background-color: gray; }
+
+p {
+  font-size: 2rem;
+}
+
+#xyz {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: bisque;
+  width: 100%;
+  position: fixed;       /* keeps it visible while scrolling */
+  top: 90vh;
+  left: 0;
+  z-index: 1000;         /* makes sure it stays on top */
+}
+
+#xyz a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
